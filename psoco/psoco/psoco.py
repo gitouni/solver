@@ -133,7 +133,7 @@ class PSOCO:
     def theta(self, qscore):
         result = np.zeros_like(qscore)
         result[qscore < 0.001] = 10 
-        result[qscore <= 0.1] = 10 
+        result[qscore <= 0.1] = 20 
         result[qscore <= 1] = 100
         result[qscore > 1] = 300
         return result
